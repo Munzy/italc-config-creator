@@ -10,7 +10,7 @@ $filePut = "./GlobalConfig.xml";
 //          Getting arguments.
 // #############################################################################
 
-if(!array_key_exist(1, $argv)) 
+if(!array_key_exists(1, $argv)) 
 {
     exit(1);
 }
@@ -24,7 +24,7 @@ else {
 
 
 // Getting file path
-if(!array_key_exist(2, $argv)) 
+if(!array_key_exists(2, $argv)) 
 {
     $filePath = "./ids.txt";
 }

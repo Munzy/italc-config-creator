@@ -72,7 +72,7 @@ function clientXML($data)
 $xmlHeader = 
 '<?xml version="1.0"?>
 <!DOCTYPE italc-config-file>
-<globalclientconfig version"3.0.3">
+<globalclientconfig version="3.0.3">
     <body>
 ';
     

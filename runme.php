@@ -54,7 +54,8 @@ function clientXML($data)
     $clients = null;
     foreach($data as $value)
     {
-        $clients .= '           <client type="0" name="' . $value[0] . '" id="' . $intID++ . '" mac="' . $value[2] . '" hostname="' . $value[1] . '"/>' . "\n";
+        $macAddr = str_replace("-", ":", $value[2]);
+        $clients .= '           <client type="0" name="' . $value[0] . '" id="' . $intID++ . '" mac="' . $macAddr . '" hostname="' . $value[1] . '"/>' . "\n";
     }
     return $clients;
 }

@@ -45,10 +45,6 @@ function explodeArray($file)
     $data = explode(PHP_EOL, $file);
     foreach($data as $key => $value)
     {
-        if($value == null)
-        {
-            continue;
-        }
         $data[$key] = explode(",", $value);
     }
     return $data;
@@ -58,8 +54,12 @@ function clientXML($data)
     $clients = null;
     foreach($data as $value)
     {
+        if(!array_key_exists(2, $value)){
+            continue;
+        }
         $macAddr = str_replace("-", ":", $value[2]);
-        $clients .= '           <client type="0" name="' . $value[0] . '" id="' . $intID++ . '" mac="' . $macAddr . '" hostname="' . $value[1] . '"/>' . "\n";
+        $clients .= "\n";  // New line
+        $clients .= '           <client type="0" name="' . $value[0] . '" id="' . $intID++ . '" mac="' . $macAddr . '" hostname="' . $value[1] . '"/>';
     }
     return $clients;
 }

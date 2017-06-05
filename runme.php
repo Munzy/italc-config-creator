@@ -83,7 +83,7 @@ $xmlFooter =
 </globalclientconfig>';
 
 $xmlClassroom =
-'       <classrom name="' . $classroomName . '">';
+'       <classroom name="' . $classroomName . '">';
 
 
 
@@ -103,4 +103,5 @@ $xml .=$xmlFooter;
 file_put_contents($filePut, $xml);
 
 echo "Creation completed....";
+echo "\n";
 exit(0);

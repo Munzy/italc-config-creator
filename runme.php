@@ -45,6 +45,10 @@ function explodeArray($file)
     $data = explode(PHP_EOL, $file);
     foreach($data as $key => $value)
     {
+        if($value == null)
+        {
+            continue;
+        }
         $data[$key] = explode(",", $value);
     }
     return $data;

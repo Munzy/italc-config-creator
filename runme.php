@@ -3,7 +3,6 @@
 // #############################################################################
 //          Variables
 // #############################################################################
-$intID = 1000;
 $filePut = "./GlobalConfig.xml";
 
 
@@ -11,7 +10,7 @@ $filePut = "./GlobalConfig.xml";
 //          Getting arguments.
 // #############################################################################
 
-if($argv[1] == null)
+if(!array_key_exist(1, $argv)) 
 {
     exit(1);
 }
@@ -25,7 +24,7 @@ else {
 
 
 // Getting file path
-if($argv[2] == null) 
+if(!array_key_exist(2, $argv)) 
 {
     $filePath = "./ids.txt";
 }
@@ -51,6 +50,7 @@ function explodeArray($file)
 }
 function clientXML($data)
 {
+    $intID = 1000;
     $clients = null;
     foreach($data as $value)
     {

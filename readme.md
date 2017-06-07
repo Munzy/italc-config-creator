@@ -17,11 +17,13 @@ Place your csv data in ids.txt.
 run `php runme.php "Classroom Name"`. 
 
 Copy the new GlobalConfig.xml file to your client machine in `%appdata%/italc`.
+Make sure to backup anything in this folder just in case, and delete the contents
+before placing the new GlobalConfig.xml.
 
 Launch italc, and show all computers under your classroom.
 
 
-# limitations
+# Limitations
 
 Can only do one classroom at a time. You could splice the xml together from 
 multiple GlobalConfig.xml into one. Just copy everything between `<classroom ...> and </classroom>`

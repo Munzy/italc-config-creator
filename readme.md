@@ -34,9 +34,11 @@ if people are interested.
 # Tested Enviornments
 
 italc:
+
     - Italc 3.0.3 (win)
 
 Building the config:
+
     - Debian 8 with php7
     
 # Coffee!
